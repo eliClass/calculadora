@@ -65,6 +65,11 @@ public class Calculadora_IU extends javax.swing.JFrame {
         });
 
         btnDivision.setText("DIVISION");
+        btnDivision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDivisionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,6 +147,15 @@ public class Calculadora_IU extends javax.swing.JFrame {
         double multiplicar = nro1 * nro2;
         JOptionPane.showMessageDialog(this, "La multiplicacion es:" + multiplicar);
     }//GEN-LAST:event_btnMultiplicarActionPerformed
+
+    private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisionActionPerformed
+        // TODO add your handling code here:
+        double nro1 = Double.parseDouble(txtNro1.getText());
+        double nro2 = Double.parseDouble(txtNro2.getText());
+
+        double division = nro1 / nro2;
+        JOptionPane.showMessageDialog(this, "La division es:" + division);
+    }//GEN-LAST:event_btnDivisionActionPerformed
 
     /**
      * @param args the command line arguments
